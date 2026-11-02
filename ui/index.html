@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سیستم هوشمند تشخیص بیماری‌ها</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>
+      <span>🩺</span> سیستم هوشمند تشخیص
+    </h1>
+    <div class="subhead">
+      بر اساس قوانین درخت تصمیم · اطلاعات بیمار را وارد کنید
+    </div>
+
+    <!-- اینجا فیلدها توسط جاوااسکریپت لود می‌شوند -->
+    <div id="formContainer"></div>
+
+    <div class="button-row">
+      <button class="btn-primary" id="predictBtn">🔍 پیش‌بینی ریسک</button>
+      <button class="btn-reset" id="resetBtn">↻ بازنشانی</button>
+    </div>
+
+    <!-- اینجا نتایج نمایش داده می‌شوند -->
+    <div class="result-area" id="resultArea">
+      <div class="result-label"><i>📊</i> نتیجه</div>
+      <div class="result-value" id="resultDisplay">—</div>
+    </div>
+
+    <div class="tree-note">
+      <i>🌳</i> موتور تشخیص · مبتنی بر درخت تصمیم‌گیری پزشکی
+    </div>
+  </div>
+
+  <!-- فایل اصلی که همه چیز را مدیریت می‌کند -->
+<script type="module" src="./wizard.js"></script>
+</body>
+</html>

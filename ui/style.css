@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Vazirmatn', 'Segoe UI', Tahoma, system-ui, sans-serif;
+}
+
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+body {
+  background: linear-gradient(145deg, #f8faff 0%, #eef2f9 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  max-width: 700px;
+  border-radius: 2.5rem;
+  box-shadow: 0 25px 45px -12px rgba(0, 20, 30, 0.25),
+              inset 0 1px 2px rgba(255, 255, 255, 0.8);
+  padding: 2.2rem 2.2rem 2.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #0b2b3b;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+h1 span {
+  background: #0b2b3b;
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.subhead {
+  color: #4f6b7a;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  padding-right: 0.9rem;
+  border-right: 3px solid #6fa3b9;
+  line-height: 1.6;
+}
+
+/* بخش‌بندی فرم‌ها */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1e4a5f;
+  margin: 1.5rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px dashed #d3e3ef;
+}
+.section-title:first-child { margin-top: 0; }
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.input-group.full-width { grid-column: 1 / -1; }
+
+.input-group label {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #1e4a5f;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.input-group label i { font-style: normal; font-size: 1rem; opacity: 0.8; }
+
+.input-group input,
+.input-group select {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #cfdde8;
+  border-radius: 1.2rem;
+  background: white;
+  transition: all 0.2s ease;
+  outline: none;
+  color: #0b2b3b;
+  font-weight: 500;
+  width: 100%;
+  font-family: inherit;
+}
+
+.input-group input { direction: ltr; text-align: left; }
+.input-group input:focus, .input-group select:focus {
+  border-color: #2d7f9e;
+  box-shadow: 0 0 0 4px rgba(45, 127, 158, 0.12);
+}
+.input-group input::placeholder {
+  color: #a8bfcc;
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+/* کارت BMI */
+.bmi-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #f4f9fd, #e8f2fa);
+  border: 1.5px solid #d3e3ef;
+  border-radius: 1.8rem;
+  padding: 1.1rem 1.5rem;
+  margin: 1.5rem 0;
+  gap: 1rem;
+}
+.bmi-card-info { display: flex; flex-direction: column; gap: 0.25rem; }
+.bmi-card-label { font-size: 0.92rem; font-weight: 700; color: #1e4a5f; }
+.bmi-card-hint { font-size: 0.72rem; color: #7c96a8; }
+.bmi-card-result { display: flex; align-items: center; gap: 0.8rem; }
+.bmi-card-value { font-size: 1.9rem; font-weight: 800; color: #0b2b3b; min-width: 62px; text-align: center; direction: ltr; }
+.bmi-pill {
+  font-size: 0.78rem; font-weight: 700; padding: 0.4rem 0.95rem; border-radius: 1rem;
+  background: #e2ecf4; color: #5b7285; border: 1px solid transparent;
+}
+.bmi-pill.underweight { background: #e8f1fb; color: #3d7ab8; }
+.bmi-pill.normal { background: #e5f5ef; color: #2d9b7a; }
+.bmi-pill.overweight { background: #fdf6e5; color: #c99a30; }
+.bmi-pill.obese1 { background: #fdf0e2; color: #d9752a; }
+.bmi-pill.obese2 { background: #fbe9e9; color: #c94b4b; }
+.bmi-pill.obese3 { background: #f8dede; color: #a82020; }
+
+/* دکمه‌ها */
+.button-row { display: flex; gap: 1rem; margin-bottom: 1.8rem; flex-wrap: wrap; }
+.btn-primary {
+  flex: 2; min-width: 160px; background: #0b2b3b; color: white; border: none;
+  padding: 1rem 1.5rem; font-size: 1.1rem; font-weight: 700; border-radius: 2rem;
+  cursor: pointer; transition: all 0.15s ease; font-family: inherit;
+}
+.btn-primary:hover { background: #123f53; transform: scale(1.01); }
+.btn-reset {
+  flex: 1; min-width: 100px; background: transparent; border: 1.5px solid #b8d0dd;
+  color: #2d5c72; font-weight: 500; padding: 1rem 1.2rem; font-size: 1rem;
+  border-radius: 2rem; cursor: pointer; transition: all 0.15s ease; font-family: inherit;
+}
+.btn-reset:hover { background: white; border-color: #7faec4; }
+
+/* نتایج */
+.result-area {
+  background: #e9f2f8; border-radius: 2rem; padding: 1.2rem 1.8rem;
+  border: 1px solid #cfe1ec; box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+.result-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.8rem 0; gap: 1rem;
+}
+.result-row + .result-row { border-top: 1px dashed #c2d6e3; }
+.result-row-label { font-size: 0.95rem; font-weight: 600; color: #4f6b7a; white-space: nowrap; }
+.result-row-value { font-size: 1.35rem; font-weight: 800; text-align: left; color: #5b7285; }
+.result-row-value.positive { color: #c94b4b; }
+.result-row-value.negative { color: #2d9b7a; }
+.result-row-value.warning { color: #c99a30; font-size: 1.05rem; }
+
+.tree-note {
+  margin-top: 1.5rem; font-size: 0.8rem; color: #6f8a9b; text-align: center;
+  border-top: 1px dashed #c2d6e3; padding-top: 1.2rem; line-height: 1.7;
+}
+
+@media (max-width: 580px) {
+  .input-grid { grid-template-columns: 1fr; }
+  .result-row { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+}
